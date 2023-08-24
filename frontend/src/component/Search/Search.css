@@ -1,0 +1,12 @@
+.input{
+    width: 100vw;
+    height: 10vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.input input{
+    height: 30px;
+    margin: auto;
+}
