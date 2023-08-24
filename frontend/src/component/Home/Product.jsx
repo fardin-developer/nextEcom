@@ -28,7 +28,7 @@ const Product = () => {
                         products.map((product) => (
                             <div key={product._id}>
 {                                console.log(product)
-}                                <Link className="productCard">
+}                                <Link to={'/product'} className="productCard">
                                     <img src="https://picsum.photos/seed/picsum/100/120" alt="Img" />
                                     <h2>{product.name}</h2>
                                     <div>
