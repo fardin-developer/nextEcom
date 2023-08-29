@@ -50,11 +50,16 @@
   .rectangle-button {
    text-decoration: none;
    color: black;
-   padding: 1vw 5vw;
+   padding: 1% 30%;
    border: 2px solid black;
    margin: 30px auto;
    min-width: 150px; /* Adjust the min-width as needed */
    text-align: center;
+   margin-bottom: 10px;
+  }
+
+  .buyBtn{
+    background-color: aqua;
   }
 
   .lungBtn{

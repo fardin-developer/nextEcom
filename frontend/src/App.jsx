@@ -9,6 +9,7 @@ import Products from './component/Products/Products.jsx'
 import Search from './component/Search/Search.jsx'
 import Product from "./component/product/ProductDetails.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './component/login/Login.jsx'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/products" element={<Products/>}/>
         <Route path="/product" element={<Product/>}/>
         <Route path="/Search" element={<Search/>}/>
+        <Route path="/account" element={<Login/>}/>
       </Routes>
       <Footer/>
     </Router>

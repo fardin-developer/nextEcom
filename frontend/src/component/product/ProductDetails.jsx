@@ -42,13 +42,12 @@ const ProductDetails = () => {
 
           </div>
 
-          {/* <div className="button">
+          <div className="button">
             <a href="#" class="rectangle-button">Add to Cart</a>
-            </div> */}
-          <div className="lungBtn">
-            <LongButton />
-
-          </div>
+            </div>
+          <div className="button">
+            <a href="#" class="rectangle-button buyBtn">Buy Now</a>
+            </div>
         </div>
       </div>
 
