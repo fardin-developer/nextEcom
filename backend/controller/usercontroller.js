@@ -86,26 +86,21 @@ exports.loginUser = async (req, res) => {
 exports.loginPost = ((req, res, next) => {
     passport.authenticate('local', { failureRedirect: '/api/v1/login' }, (err, user, info) => {
       if (err) {
-        // Handle error, e.g., display an error message or redirect to an error page
         console.error(err);
         return res.status(500).json({ message: 'Internal server error' });
       }
 
       if (!user) {
-        // Authentication failed, display error message or redirect to the login page
         console.log(info.message);
         return res.status(401).json({ message: info.message });
       }
 
-      // Authentication succeeded, log in the user
       req.logIn(user, (err) => {
         if (err) {
-          // Handle error during login process
           console.error(err);
           return res.status(500).json({ message: 'Internal server error' });
         }
 
-        // Redirect or respond with a success message
         console.log('Login successful');
         return  res.json({
             success: true,

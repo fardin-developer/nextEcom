@@ -13,18 +13,20 @@ import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+    const [password, setPass] = useState('');
 
     const signInHandle = () => {
 
-        fetch("https://jsonplaceholder.typicode.com/posts", {
+        const requestBody = {
+            email: email,
+            password: password,
+          };
+
+        fetch("http://localhost:4000/api/v1/login", {
 
             method: "POST",
-            body: JSON.stringify({
-                title: email,
-                body: pass,
-                userId: 1
-            }),
+            body: JSON.stringify(requestBody),
+
 
             // Adding headers to the request
             headers: {
